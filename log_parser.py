@@ -18,7 +18,7 @@ class LogParser:
         port_match = re.search(r',(\d{1,5}),(\d{1,5})', raw_log)
         dest_port = int(port_match.group(2)) if port_match else 80
 
-        return {
+        return { 
             "timestamp": datetime.utcnow().isoformat(),
             "source_ip": source_ip,
             "destination_ip": dest_ip,
